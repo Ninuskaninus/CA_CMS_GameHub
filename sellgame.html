@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png">
+    <title>Gamehub – Sell a game</title>
+</head>
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="about.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="profile.html">Profile</a>
+                <a href="sellgame.html">Sell a game</a>
+            </ul>
+        </div>
+    </nav>
+    <nav class="mainNav">
+        <div class="profileBoxNav">
+            <img class="navProfile" src="/images/profile.jpg" alt="profile-picture">
+            <h4 class="username">Miriamthewarrior_90</h4>
+            <div class="navBoxGrid">
+                <p class="navBoxGridTitle">Level</p>
+                <p class="navBoxGridTitle"> GameScore</p>
+                <p class="navBoxGridText">35</p>
+                <p class="navBoxGridText">150.154pt</p>
+            </div>
+        <div class="navMenu1">
+            <h3>Menu</h3>
+            <div class="menuItem">
+                <img class="navIcon" src="images/home.png" type="png" alt="Home-icon" role="presentation"><a href="index.html">Home</a>
+            </div>
+            <div class="menuItem">
+                <img class="navIcon" src="images/games.png" type="png" alt="Game-icon" role="presentation"><a href="games.html">Games</a>
+            </div>
+            <div class="menuItem">
+                <img class="navIcon" src="images/profile.png" type="png" alt="Profile-icon" role="presentation"><a href="profile.html">Profile</a>
+            </div>
+            <div class="menuItem">
+                <img class="navIcon" src="images/contact.png" type="png" alt="Contact-icon" role="presentation"><a href="contact.html">Contact</a>
+            </div>
+            <div class="menuItem">
+                <img class="navIcon" src="images/sellgame.png" type="png" alt="Sell game-icon" role="presentation"><a href="sellgame.html">Sell a game</a>
+            </div>
+        </div>
+        <div class="navMenu1">
+            <h3>Useful links</h3>
+            <div class="menuItem">
+                <img class="navIcon" src="images/about.png" type="png" alt="About-icon" role="presentation"><a href="about.html">About</a>
+            </div>
+        </div>
+        <div class="navMenu1">
+            <a class="button1" href=""><img class="navIcon" src="images/logout.png" alt="Logout-icon" role="presentation">Log out</a>
+        </div>
+        </div>
+</nav>
+
+    <main>
+        <a href="index.html"><img class="logoImg" src="images/GameHub_Logo.png" alt="Gamehub-logo"></a>
+       <div class="sellGameContainer">
+        
+        <div class="sellgameGrid">
+            <form class="sellGameForm">
+                <h1>Sell a game!</h1>
+                <label for="title">Game Title:</label>
+                <input type="text" id="title" name="title" onkeyup="preview()"><br>
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="categories[]" onkeyup="preview()"><br>
+                <label for="console">Console:</label>
+                <input type="text" id="console" name="consoles[]" onkeyup="preview()"><br>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" cols="50" onkeyup="preview()"></textarea><br>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" min="0" step="0.01" onkeyup="preview()"><br>
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image"><br>
+                <button class="button2" id="sellBtn" href="">Submit</button>
+                <div class="popup">
+                    <p>Upload successful!</p>
+                    <p>Redirecting back to profile...</p>
+                </div>
+            </form>
+            <div class="previewItem">
+                
+                <h2>Preview</h2>
+                <h1 id="sellTitle">Game title</h1>
+                <div class="gridItemCategories">
+                    <p class="buttonChategory"></p>
+                </div>
+               
+                
+                    <div class="previewInformation">
+                        <img class="previewImg" src="/images/GameHub_covers10.jpeg" alt="Game image">
+                        <div class="previewText">
+                            <h2 class="gamesPrice">$</h2>
+                            <h2>Description</h2>
+                            <p class="gamesDescription"></p>
+                        </div>
+                    </div>
+                
+                
+                </div>
+            </div>
+            
+        </div>  
+        
+    </main>
+    <footer>
+        <ul>
+            <a href="games.html">Games</a>
+            <a href="profile.html">Profile</a>
+            <a href="contact.html">Contact</a>
+            <a href="sellgame.html">Sell a Game</a>
+            <a href="about.html">About</a>
+
+        </ul>
+    </footer>
+    <script type="module" src="js/sellgame.js"></script>
+</body>
+</html>
+
